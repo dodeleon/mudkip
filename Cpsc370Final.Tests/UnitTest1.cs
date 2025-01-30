@@ -8,7 +8,7 @@ public class UnitTest1
     }
 
     [Fact]
-    public void Constructor_ShouldInitializePropertiesCorrectly()
+    public void FeatsTest()
     {
         // Arrange
         string expectedFeatName = "Test Feat"; 
@@ -39,6 +39,7 @@ public class UnitTest1
         Assert.Equal(ExpectedType, spells.Type);
         Assert.Equal(ExpecetedDamage, spells.Damage);
     }
+    
     
     
     
