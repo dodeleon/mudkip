@@ -24,7 +24,7 @@ public class UnitTest1
     }
     
     [Fact]
-    public void SpellsTest()
+    public void SpellsTestConstructor()
     { 
         //Arrange
         string ExpectedName = "Fire";

@@ -22,7 +22,24 @@ class Program
                     characterCreation();
                     break;
                 case "2":
+                    string option = Console.ReadLine();
                     DataBase();
+                    switch (option)
+                    {
+                        case "1":
+                            Console.WriteLine("1. Spell\n");
+                            //Call spell sub menu
+                            break;
+                        case "2":
+                            Console.WriteLine("2. Race\n");
+                            //Call Race sub menu
+                            break;
+                        case "3" :
+                            Console.WriteLine("3.Feat\n");
+                            //Call Feat sub menu
+                            break;
+                            
+                    }
                     break;
                 case "0":
                     exit = Exit();
@@ -43,14 +60,16 @@ class Program
         Console.WriteLine("Exiting...");
         return true;
     }
+    
 
     private static void DataBase()
     {
-        Console.WriteLine("Search\n");
-        // Add your code for Option 5 here
+        Console.WriteLine("Database Manipulation\n");
+        Console.WriteLine("1. Add\n");
         Pause();
     }
-    
+   
+
     private static void characterCreation()
     {
         Console.WriteLine("User Menu\n");
@@ -63,8 +82,8 @@ class Program
     {
         Console.WriteLine("DND Character Creator: \n");
         Console.WriteLine($"Welcome, {user.UserName}!\n");
-        Console.WriteLine("1. User Options\n");
-        Console.WriteLine("2. DataBase\n");
+        Console.WriteLine("1. User\n");
+        Console.WriteLine("2. Database\n");
         Console.WriteLine("0. Exit\n");
         Console.Write("Select an option: ");
     }
