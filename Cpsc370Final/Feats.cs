@@ -1,24 +1,14 @@
-﻿namespace DefaultNamespace;
-
-public class Feats
+﻿namespace Cpsc370Final
 {
-    
-    public string Feats { get; set; }
-    public string FeatsDiscriptions { get; set; }
-    
-    public string FeatBenefits { get; set; }
-    
-    pubic string FeatBenefits(string Benefits)
+    public class Feat
     {
-        FeatBenefits = Benefits;
-    }
-    public FeatsDiscription(string infomation)
-    {
-        FeatsDiscription = infomation;
-    }
+        public string FeatName { get; set; }
+        public string FeatDescription { get; set; }
 
-    public Feats(string feats)
-    {
-        Feats = feats;
+        public Feat(string featName, string featDescription)
+        {
+            FeatName = featName;
+            FeatDescription = featDescription;
+        }
     }
 }
