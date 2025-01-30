@@ -5,14 +5,14 @@ public class Spells
     //name,type,description
     public string Name { get; set; }
     public string Type { get; set; }
-    public string Description { get; set; }
+    public string Damage { get; set; }
     
 
     public Spells()
     {
         Name = "Default Spell";
         Type = "Default Type";
-        Description = "Default Description";
+        Damage = "Default Damage";
     }
     
     //Getters and Setters
@@ -34,13 +34,13 @@ public class Spells
         this.Type = Type;
     }
     
-    public string getDescription()
+    public string getDamage()
     {
-        return Description;
+        return Damage;
     }
-    public void setDescription(string Description)
+    public void setDamage(string Damage)
     {
-        this.Description = Description;
+        this.Damage = Damage;
     }
     
 }
