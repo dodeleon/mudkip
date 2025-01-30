@@ -20,6 +20,19 @@ class Program
             {
                 case "1":
                     characterCreation();
+                    string choice = Console.ReadLine();
+                    switch (choice)
+                    {
+                        case "1" :
+                            //CharacterCreationMenu();
+                        Console.Write("Hello\n");
+                            Pause();
+                            break;
+                        case "2":
+                            Console.WriteLine("Goodbye\n");
+                            Pause();
+                            break;
+                    }
                     break;
                 case "2":
                     string option = Console.ReadLine();
