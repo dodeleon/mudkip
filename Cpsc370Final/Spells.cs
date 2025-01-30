@@ -8,11 +8,11 @@ public class Spells
     public string Damage { get; set; }
     
 
-    public Spells()
+    public Spells(string Name, string Type, string Damage)
     {
-        Name = "Default Spell";
-        Type = "Default Type";
-        Damage = "Default Damage";
+        this.Name = Name;
+        this.Type = Type;
+        this.Damage = Damage;
     }
     
     //Getters and Setters
