@@ -61,6 +61,24 @@ public class UnitTest1
         Assert.Equal(ExpectedType, spells.Type);
         Assert.Equal(ExpecetedDamage, spells.Damage);
     }
+
+    [Fact]
+    public void WriteToJsonFileUsingObject()
+    {
+        //Arrange
+        Storage<Feat> storage = new Storage<Feat>("tempFile.txt");
+        Feat testFeat = new Feat("Test Feat", "Test Feat description");
+        
+        //Act
+        storage.AddObjectToJson<Feat>(testFeat);
+        
+        //Assert
+        Console.WriteLine(storage.ReadObjectsFromJson<Feat>());
+        
+    }
+    
+    
+    
     
     
     
