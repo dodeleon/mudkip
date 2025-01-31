@@ -3,7 +3,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-public class Storage
+public class Storage<T>
 {
     private string jsonFileName;
 
@@ -12,9 +12,9 @@ public class Storage
         jsonFileName = fileName;
     }
         
-    public void AddObjectToJson<T>(T obj)
+    public void AddObjectToJson(T obj)
     {
-        List<T> objects = ReadObjectsFromJson<T>();
+        List<T> objects = ReadObjectsFromJson();
         objects.Add(obj);
         
         string json = JsonSerializer.Serialize(objects, new JsonSerializerOptions { WriteIndented = true });
@@ -22,7 +22,7 @@ public class Storage
         File.WriteAllText(jsonFileName, json);
     }
 
-    public List<T> ReadObjectsFromJson<T>()
+    public List<T> ReadObjectsFromJson()
     {
         if (!File.Exists(jsonFileName))
         {
